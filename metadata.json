@@ -1,0 +1,6 @@
+{
+  "name": "Silk — On-Device Visual Perception Browser Agent",
+  "description": "Silk is a biomimetic on-device AI browser agent that automates tasks and extracts data with dual-track WebGPU perception and mathematical zero-data-egress privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
