@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Organic Silk Mesh & Iridescent Caustics */
+.silk-mesh-bg {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(148, 163, 184, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 100% 30%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 0% 70%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
+}
+
+.silk-border {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.silk-border-hover {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.silk-glass {
+  background: rgba(17, 21, 28, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.silk-glass-subtle {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Iridescent shimmer button */
+.iridescent-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.iridescent-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(165, 180, 252, 0.25) 60deg,
+    rgba(196, 181, 253, 0.3) 120deg,
+    rgba(224, 231, 255, 0.1) 180deg,
+    rgba(147, 197, 253, 0.25) 240deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
+  animation: rotateGlow 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.iridescent-glow:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
