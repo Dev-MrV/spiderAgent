@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInstall }) => {
                 {/* Zone 3: 1-2 primary actions */}
                 <div className="flex items-center gap-3">
                     <a
-                        href="https://github.com/iqandeq006-hue/SIH-26171"
+                        href="https://github.com/iqandeq006-hue/Spidey-Agent"
                         target="_blank"
                         rel="noreferrer"
                         className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-slate-700 hover:text-black transition-colors whitespace-nowrap"
